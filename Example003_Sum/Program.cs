@@ -1,6 +1,9 @@
-﻿int numberA = new Random().Next(1, 10); // 1 2 3 ... 9
-Console.WriteLine(numberA);
-int numberB = new Random().Next(1, 10);
-Console.WriteLine(numberB);
-int result = numberA + numberB;
-Console.WriteLine(result);
+﻿// int numberA = new Random().Next(1, 10); // Задаём случайное число в указанном диапазоне: 1 2 3 ... 9
+Console.WriteLine("Введите число А:"); // Привлекаем пользователя к вводу числа с клавиатуры
+int numberA = Convert.ToInt32(Console.ReadLine()); // Показываем программе, каким типом данных явялется введенное число 
+                                                    // из терминала. И помещаем это значение в переменную numberA
+int numberB = new Random().Next(1, 10); // А второе число создается рандомно в указанном диапазоне
+Console.WriteLine(numberB); // Просим программу вывести это сгенерированное число в консоль
+
+int result = numberA + numberB; // Вводим переменную, которая хранит результат сложения двух полученных чисел
+Console.WriteLine(result); // Выводим в терминал результат сложения двух чисел
