@@ -123,13 +123,33 @@
 
 
 // РЕКУРСИЯ - это функция, которая вызывает саму себя!
+// Самый простой пример рекурсии:
 
-double Factorial(int n)
-{
-    if (n == 1) return 1; // 1! = 0; 0! = 1
-    else return n * Factorial(n - 1);
-}
-// for (int i = 1; i < 10; i++)
+// double Factorial(int n) // double, т.к. оно больше значений в себя включает
+// {
+//     if (n == 1) return 1; // 1! = 0; 0! = 1
+//     else return n * Factorial(n - 1);
+// }
+// for (int i = 1; i < 40; i++)
 // {
 //     Console.WriteLine($"{i}! = {Factorial(i)}");
 // }
+
+
+// Пример - запишем код для цифр фибоначчи
+// f(1)=1
+// f(2)=1
+// f(n)=f(n-1)+f(n-2)
+
+double Fibonacci(int n)
+{
+    if (n == 1 || n == 2) return 1;
+    else return (Fibonacci(n - 1) + Fibonacci(n - 2));
+}
+
+for (int i = 1; i < 50; i++)
+{
+    Console.WriteLine($"f{i} = {Fibonacci(i)}");
+}
+
+
